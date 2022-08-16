@@ -12,12 +12,9 @@ print(walkOnAxis(0, 2))
 
 def yourName(name1, name2):
     #checks if name1 subsequence of name2
-    name1List = []
-    name2List = []
-    for i in name1:
-        name1List.append(i)
-    for i in name2:
-        name2List.append(i)
+    name1List = [i for i in name1]
+    name2List = [i for i in name2]
+
     
     for i in range(len(name1List)):
         try:
@@ -32,16 +29,11 @@ def yourName(name1, name2):
             break
 
     #checks if name2 subsequence of name1
-    name1List = []
-    name2List = []
-    for i in name1:
-        name1List.append(i)
-    for i in name2:
-        name2List.append(i)
+    name1List = [i for i in name1]
+    name2List = [i for i in name2]
 
     for i in range(len(name2List)):
         try:
-
             for x in name1List[i:]:
                 if name2List[i] == x:
                     if name2List == name1List[:len(name2List)]:
